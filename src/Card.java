@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 /**
  * Created by eric on 2/27/2017.
  */
@@ -22,4 +24,5 @@ public class Card {
     int getSuit(){
         return suit;
     }
+
 }
