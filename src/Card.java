@@ -1,28 +1,38 @@
-import java.util.Comparator;
+import javax.swing.*;
 
 /**
  * Created by eric on 2/27/2017.
  */
-public class Card {
-    private final int rank; //2 =15, A = 14, K = 13, Q = 12, J = 11, 10 = 10, 9 = 9, ..., 3 = 3
-    private final int suit; //1 = Spades, 2 = Hearts, 3 = Clubs, 4 = Diamonds
-    private final String img = null; //represents file path
-    Card(int r, int s){
-        if(s > 0 && s < 5)
-            suit = s;
+public class Card implements Comparable<Card> {
+    int Rank;
+    char Suit;
+    private ImageIcon Img;
+    private ImageIcon BackImg;
+    public Card(String S, int R){
+        Suit = S.charAt(0);
+        Rank = R;
+        Img = new ImageIcon("src/Imgs/" + Rank + "_of_" + S + ".png");
+        BackImg = new ImageIcon("src/Imgs/Back.png");
+    }
+    @Override
+    public int compareTo(Card OtherCard){
+        //-int if this < other, 0 if this == other, +int if this > other
+        int result;
+        if(this.Rank > OtherCard.Rank)
+            result = 1;
+        else if(this.Rank == OtherCard.Rank)
+            result = 0;
         else
-            suit = 0;
-        if(r > 2 && r < 16)
-            rank = r;
-        else
-            rank = 0;
+            result = -1;
+        return result;
     }
 
-    int getRank(){
-        return rank;
+    public int getRank(){
+        return Rank;
     }
-    int getSuit(){
-        return suit;
+    public char getSuit(){
+        return Suit;
     }
-
+    public ImageIcon getImg(){ return Img;}
+    public ImageIcon getBackImg(){return BackImg;}
 }
