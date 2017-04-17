@@ -1,5 +1,11 @@
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 /**
  * Created by eric on 4/3/2017.
@@ -33,7 +39,7 @@ public class Board extends JFrame {
         table = new JPanel();
         table.setLayout(new GridLayout(1, 5));
         for(int i = 0; i < 4; i++) {
-            tableCards[i] = new JLabel(back.getBackImg());
+            tableCards[i] = new JLabel();
             table.add(tableCards[i]);
         }
         JButton Pass = new JButton();
@@ -60,6 +66,7 @@ public class Board extends JFrame {
     }
     private void InitHands(){
         hands = new JPanel[numPlayers];
+        Border unhighlight = BorderFactory.createLineBorder(Color.BLACK);
         for(int i = 0; i < numPlayers; i++){
             hands[i] = new JPanel();
             if(i == currentTurn) {
@@ -67,6 +74,37 @@ public class Board extends JFrame {
                 for (int j = 0; j < players[i].HandSize; j++) {
                     JPanel CardHolder = new JPanel();
                     CardHolder.add(new JLabel(players[i].hand.elementAt(j).getImg()));
+                    CardHolder.setBorder(unhighlight);
+                    CardHolder.addMouseListener(new MouseListener() {
+                        @Override
+                        public void mouseClicked(MouseEvent e) {
+                            Border highlighted = BorderFactory.createLineBorder(Color.YELLOW);
+                            if(CardHolder.getBorder() == unhighlight)
+                                CardHolder.setBorder(highlighted);
+                            else
+                                CardHolder.setBorder(unhighlight);
+                        }
+
+                        @Override
+                        public void mousePressed(MouseEvent e) {
+
+                        }
+
+                        @Override
+                        public void mouseReleased(MouseEvent e) {
+
+                        }
+
+                        @Override
+                        public void mouseEntered(MouseEvent e) {
+
+                        }
+
+                        @Override
+                        public void mouseExited(MouseEvent e) {
+
+                        }
+                    });
                     hands[i].add(CardHolder);
                     CardHolder.setVisible(true);
                 }
