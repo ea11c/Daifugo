@@ -39,9 +39,13 @@ public class Deck {
         while(size >= players.length){
             for(int i = 0; i < players.length; i++){
                 players[i].hand.addElement(deck.remove(0));
+                System.out.println("dealt " + players[i].hand.lastElement().getRank() + " of " + players[i].hand.lastElement().getSuit());
                 players[i].HandSize++;
                 size--;
             }
+        }
+        for(int i = 0; i<players.length; i++){
+            players[i].hand.sort(Card::compareTo);
         }
     }
 
