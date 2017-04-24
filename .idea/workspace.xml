@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d883fd47-a950-4b31-a3d1-3b5305a616c4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CardPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Daifugo/Board$1.class" afterPath="$PROJECT_DIR$/out/production/Daifugo/Board$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Daifugo/Board.class" afterPath="$PROJECT_DIR$/out/production/Daifugo/Board.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Daifugo/Deck.class" afterPath="$PROJECT_DIR$/out/production/Daifugo/Deck.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board.java" afterPath="$PROJECT_DIR$/src/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Deck.java" afterPath="$PROJECT_DIR$/src/Deck.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -446,12 +443,19 @@
       <option name="project" value="LOCAL" />
       <updated>1488568705782</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="cards can be played to the table now">
+      <created>1493065424778</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493065424778</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -490,7 +494,8 @@
     <MESSAGE value="added card and player classes" />
     <MESSAGE value="added Game class, Deck shuffle, and Deck deal" />
     <MESSAGE value="Added command line functionality for playing the game without playing pairs or higher" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added command line functionality for playing the game without playing pairs or higher" />
+    <MESSAGE value="cards can be played to the table now" />
+    <option name="LAST_COMMIT_MESSAGE" value="cards can be played to the table now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -926,7 +931,7 @@
     <entry file="file://$PROJECT_DIR$/src/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
