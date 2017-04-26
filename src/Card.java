@@ -16,14 +16,14 @@ public class Card implements Comparable<Card> {
     }
     @Override
     public int compareTo(Card OtherCard){
-        //-int if this < other, 0 if this == other, +int if this > other
+        //-int if this > other, 0 if this == other, +int if this < other for a descending sort
         int result;
         if(this.Rank > OtherCard.Rank)
-            result = 1;
+            result = -1;
         else if(this.Rank == OtherCard.Rank)
             result = 0;
         else
-            result = -1;
+            result = 1;
         return result;
     }
 

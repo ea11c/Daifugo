@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.util.Collections;
 import java.util.Vector;
 
@@ -14,7 +13,6 @@ public class Deck {
 
         //2's are the highest rank card, so have an internal value of 15
         int rIndex = 3;
-        int vIndex = 0;
         while(rIndex < 16){
             deck.addElement(new Card("spades", rIndex));
             deck.addElement(new Card("clubs", rIndex));
@@ -39,8 +37,6 @@ public class Deck {
         while(size >= players.length){
             for(int i = 0; i < players.length; i++){
                 players[i].hand.addElement(deck.remove(0));
-                System.out.println("dealt " + players[i].hand.lastElement().getRank() + " of " + players[i].hand.lastElement().getSuit());
-                players[i].HandSize++;
                 size--;
             }
         }
